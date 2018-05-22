@@ -2,7 +2,12 @@ import random
 secret = random.randint(1,10)
 print('------------------我爱鱼C工作室----------------')
 temp = input("不妨猜一下小甲鱼现在心里想的是哪个数字：")
-guess = int(temp)+10
+
+while temp.isdigit() != True:
+    temp = input("输入格式不正确，请重新输入整数：")
+
+guess = 0
+
 while guess != secret:
     guess = int(temp)
     if guess == secret:
